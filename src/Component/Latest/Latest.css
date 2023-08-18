@@ -1,0 +1,143 @@
+.mainContainer{
+    width: 100%;
+    height: max-content;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+.mainContainer h3{
+    font-size: 24px;
+    margin: 10px 0 15px 7px;
+    position: relative;
+}
+
+.mainContainer h3::after{
+    content: "";
+    width: 60px;
+    height: 2px;
+    background-color: var(--pink);
+    position: absolute;
+    left: 6px;
+    bottom: -7px;
+    border-radius: 6px;
+}
+
+.cardContainer{
+    width: 100%;
+    height: 480px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+
+.card{
+    width: calc(92% / 3);
+    height: 450px;
+    border-radius: 7px;
+    cursor: pointer;
+    box-shadow: 0 3px 5px 5px var(--lightShadow);
+    transition: all 0.5s;
+}
+
+.card:hover{
+    box-shadow: 0 3px 5px 5px var(--lightShadow), 0 4px 4px 6px #d1cccc;
+}
+
+.cardImg{
+    width: 100%;
+    height: 220px;
+}
+
+.cardImg img{
+    width: 100%;
+    height: 100%;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+}
+
+.cardContent{
+    width: 100%;
+    padding: 10px 20px 5px;
+    
+}
+
+.cardContent h2{
+    font-size: 22px;
+    color: var(--blackFontCol);
+    margin-top: 10px;
+}
+
+.cardContent p{
+    font-size: 14px;
+    line-height: 20px;
+    color: var(--gray);
+    margin: 12px auto 8px;
+}
+.cardContent span{
+    font-size: 11px;
+    color: var(--gray);
+    
+}
+
+.cardContent span b{
+    font-size: 12px;
+    color: var(--blackFontCol);
+}
+
+
+
+@media screen and (max-width:856px){
+    .cardContainer{
+        width: 98%;
+        height: max-content;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        gap: 22px;
+        margin: 30px auto 20px;
+    }
+
+    .cardContainer:last-child::after{
+        content: "Advertisment";
+        width: 45%;
+        height: 450px;
+        border: 1px solid #000;
+        border-radius: 7px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size:30px;
+        font-weight: 700;
+        letter-spacing: 1px;
+    }
+
+    .card{
+        width: 45%;
+    }
+}
+
+
+@media screen and (max-width:768px){
+    .mainContainer{
+        width: 98%;
+        padding: 10px;
+        /* border: 1px solid #000; */
+    }
+    .cardContainer{
+        height: max-content;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 25px;
+        margin: 30px auto 20px;
+    }
+
+    .cardContainer:last-child::after{
+        content: '';
+        display: none;
+    }
+
+    .card{
+        width: 95%;
+    }
+}

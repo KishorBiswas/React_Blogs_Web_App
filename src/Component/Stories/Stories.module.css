@@ -1,0 +1,65 @@
+.storieCard{
+    height: 300px;
+}
+
+.storyContenair{
+    width: 100%;
+    height: 100%;
+}
+.storyTitle{
+    margin-top: 25px ;
+    margin-bottom: 65px;
+}
+
+.storyTitle h2{
+    font-size: 27px;
+    line-height:30px;
+}
+.storyBody{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.storyBody >p{
+   margin-top: 70px; 
+   margin-left: 15px;
+   margin-bottom: 25px;
+   color: var(--gray);
+}
+
+.storyBody>:nth-child(2) > span{
+    margin-left: 15px;
+    margin-top: 65px;
+}
+
+.storyBody>:nth-child(2) > span > b{
+    font-size: 16px;
+    color: var(--blackFontCol);
+}
+
+@media screen and (max-width:960px){
+    .storyTitle h2{
+        font-size: 22px;
+    }
+    .storyBody >p{
+        margin-top: 80px; 
+        
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .storyContenair{
+        width: 99%;
+        height: 100%;
+        padding-right: 5px;
+    }
+    .storyTitle{
+        margin-bottom: 35px;
+    }
+    .storyBody >p{
+        margin-top: -60px; 
+        /* margin-left: 15px;
+        margin-bottom: 25px;
+        color: var(--gray); */
+     }
+}

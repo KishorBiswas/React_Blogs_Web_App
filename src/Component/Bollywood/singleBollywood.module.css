@@ -1,0 +1,42 @@
+.navigationBtn{
+    width: 99%;
+    height: 60px;
+    margin: 5px auto 15px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 15px;
+    /* border: 1px solid #000; */
+}
+
+.navigationBtn img{
+    width: 35px;
+    height: 35px;
+    transform: rotate(90deg);
+    cursor: pointer;
+    transition: all 0.5s;
+}
+.navigationBtn img:hover{
+    transform: scale(1.2) rotate(90deg);
+}
+
+.navigationBtn button{
+    width: 120px;
+    height: 40px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    text-align: center;
+    font-size: 18px;
+    margin-left: 10px;
+    margin-right: 10px;
+    background-color: var(--linkCol);
+    color: var(--fontCol);
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+.navigationBtn button:hover{
+    background-color: var(--btCol);
+    transform: scale(1.1);
+}

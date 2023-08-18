@@ -1,0 +1,460 @@
+.mainContainer{
+    width:97vw;
+    height: max-content;
+    margin: 20px auto;
+}
+
+.title{
+    width: 100%;
+    height: 60px;
+    margin-bottom: 20px;
+    margin-left: 10px;
+}
+.title h3{
+    font-size: 24px;
+    margin: 10px 0 15px 7px;
+    position: relative;
+}
+
+.title h3::after{
+    content: "";
+    width: 70px;
+    height: 2px;
+    background-color: var(--pink);
+    position: absolute;
+    left: 6px;
+    bottom: -7px;
+    border-radius: 6px;
+}
+
+
+.itemContainer{
+    width: 98%;
+    height: max-content;
+    margin: 5px auto;
+    padding: 5px;
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+}
+
+.articleContainer{
+    width: 63%;
+    height: max-content;
+}
+
+
+.articlesList{
+    width: 90%;
+    /* overflow: hidden; */
+}
+
+.articlesList>:nth-child(1){
+    height: 260px;
+}
+
+.articlesList>:nth-child(1) .cardContent h3{
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+.cardContainer{
+    width: 100%;
+    height: 180px;
+    /* border: 1px solid #000; */
+    box-shadow: 1px 4px 5px 3px var(--lightShadow);
+    padding: 5px;
+    border-radius: 5px;
+    margin: 12px 5px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.cardContainer .imgContainer{
+    width: 40%;
+    height: 100%;
+    border-radius: 5px;
+    
+}
+
+.cardContainer .cardContent{
+    width: 50%;
+    height: 100%;
+    margin: 25px auto 10px 20px;
+}
+.cardContainer .cardContent h3{
+    font-size: 20px;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    margin-top: -5px;
+    margin-bottom: 12px;
+    font-weight: 500;
+    color: var(--blackFontCol);
+}
+
+.cardContainer .cardContent p{
+    font-size: 15px;
+    color: var(--gray);
+    margin-bottom: 15px;
+}
+.cardContainer .cardContent span{
+    color: var(--gray);
+    font-size: 15px;
+   
+}
+
+.cardContainer .cardContent span b{
+    color: #202020;
+}
+.cardContainer .imgContainer img{
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+}
+
+.ShowMore{
+    height: 30px;
+    width: max-content;
+    margin: 20px auto 20px 1px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.4s;
+    /* border: 1px solid #000; */
+}
+
+.ShowMore:hover{
+    transform: scale(1.1);
+}
+
+.ShowMore span{
+    line-height: 30px;
+    color: var(--gray);
+}
+
+.ShowMore img{
+    width: 20px;
+    height: 20px;
+    margin-left:10px;
+    margin-right:10px;
+}
+.verticalGelary{
+    width: 90%;
+    height: 360px;
+    border-radius: 5px;
+    margin-top: 50px;
+    /* border: 1px solid #000; */
+}
+
+.myVarticelSlide{
+    width: 100%;
+    height: 100%;
+}
+.mySwiper_slide{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.mySwiper_slide > img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin: 0 !important;
+    padding: 0;
+}
+
+.mySwiper_slide h4{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% ,-50%);
+    z-index: 100;
+    font-size: 25px;
+    color: var(--fontCol);
+    text-shadow: 0px 2px 4px var(--lightShadow);
+}
+
+.mySwiper_slide span{
+    position: absolute;
+    bottom: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 100;
+    font-size: 15px;
+    color: var(--fontCol);
+    text-shadow: 0px 2px 4px var(--lightShadow);
+}
+
+.postContainer{
+    width: 35%;
+    height: max-content;
+}
+
+.postCardList{
+    width: 100%;
+    
+}
+
+.postCardList>:nth-child(2){
+    height: 330px;
+    flex-direction: column;
+}
+
+.postCardList>:nth-child(2) img{
+    width: 100%;
+    height: 70%;
+}
+.postCardList>:nth-child(2) .postContent{
+    width: 70%;
+    height: 30%;
+    margin-left: 5px;
+    align-self: flex-start;
+    
+}
+
+.postCardList>:nth-child(2) .postContent h3{
+    font-size: 19px;
+    margin-bottom: 2px;
+}
+
+.postCard{
+    width: 100%;
+    height: 110px;
+    border-radius:5px;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 13px 5px;
+    box-shadow: 1px 3px 4px 3px var(--lightShadow);
+    cursor: pointer;
+
+}
+
+.postCard > img{
+    width: 40%;
+    height: 100%;
+    border-radius: 5px;
+}
+
+.postContent{
+    width:46%;
+    height: 100%;
+}
+
+.postContent h3{
+    font-size: 16px;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+}
+
+.postContent span{
+    color: var(--gray);
+    font-size: 12px;
+    
+}
+
+.cardContainer .cardContent span b{
+    color: #202020;
+}
+
+.advertisment{
+    width: 90%;
+    height: 485px;
+    border: 1px solid #000;
+    text-align: center;
+    line-height: 600px;
+    font-size: 40px;
+    letter-spacing: 1px;
+    margin: 5px auto 35px;
+}
+
+
+@media screen and (max-width:960px) {
+    .mainContainer{
+        width:95vw;
+        /* border: 1px solid #000; */
+    }
+    .articleContainer{
+        width: 64%;
+    }
+    .cardContainer{
+        height: 150px;
+    }
+    .cardContainer .cardContent h3{
+        font-size: 18px;
+        letter-spacing: 0.5px;
+        margin-bottom: 2px;
+        font-weight: 400;
+    }
+
+    .cardContainer .cardContent p{
+        font-size: 12px;
+        margin-bottom: 2px;
+    }
+    .cardContainer .cardContent span{
+        font-size: 12px;
+        margin-top: -10px;
+    }
+    .articlesList>:nth-child(1){
+        height: 180px;
+    }
+    .articlesList>:nth-child(1) .cardContent h3{
+        font-size: 20px;
+        margin-bottom: 3px;
+        margin-top: -8px;
+    }
+
+    .postContainer{
+        width: 40%;
+    }
+
+    .advertisment{
+        width: 90%;
+        height: 385px;
+        line-height: 385px;
+        font-size: 25px;
+        margin: 5px auto 35px;
+    }
+
+    .postCardList>:nth-child(2){
+        height: 250px;
+        flex-direction: column;
+    }
+    
+    .postCardList>:nth-child(2) img{
+        width: 100%;
+        height: 60%;
+    }
+    .postCardList>:nth-child(2) .postContent{
+        width: 90%;
+        height: 40%;
+        margin-left: 5px;
+        align-self: flex-start;
+        
+    }
+    
+    .postCardList>:nth-child(2) .postContent h3{
+        font-size: 16px;
+        margin-bottom: 2px;
+    }
+
+    .postCard > img{
+        width: 40%;
+        height: 100%;
+        border-radius: 5px;
+    }
+    
+    .postContent{
+        width:56%;
+        height: 100%;
+    }
+    
+    .postContent h3{
+        font-size: 15px;
+        text-transform: capitalize;
+        letter-spacing: 0.5px;
+        margin-bottom: 12px;
+    }
+    
+    .postContent span{
+        color: var(--gray);
+        font-size: 11px;
+        
+    }
+    .postCardList>:last-child .postContent h3{
+        font-size: 15px;
+        margin-bottom: 2px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .mainContainer{
+        width:94vw;
+        /* border: 1px solid #000; */
+    }
+    .itemContainer{
+        flex-direction: column;
+        align-items: center;
+    }
+    .articleContainer{
+        width: 100%;
+    }
+    .articlesList{
+        width: 98%;
+    }
+    .cardContainer{
+        height: 160px;
+        margin: 15px auto;
+    }
+    .articlesList>:nth-child(1){
+        height: 160px;
+    }
+    .cardContainer .cardContent{
+        width: 55%;
+    }
+    .cardContainer .cardContent h3{
+        font-size: 16px;
+        margin-bottom: 2px;
+        font-weight: 500; 
+    }
+
+    .articlesList>:nth-child(1) .cardContent h3{
+        font-size: 16px;
+        margin-bottom: 2px;
+       
+    }
+
+    .cardContainer .cardContent p{
+        margin-bottom: 0;
+    }
+    .cardContainer .cardContent span{
+        font-size: 11px;
+        margin-top: -12px;
+    }
+
+    .ShowMore img{
+        order: 2;
+        transform: rotate(-90deg);
+    }
+    .ShowMore span{
+        order: 1;
+        margin-left: 10px;
+    }
+
+    .verticalGelary{
+        display: none;
+    }
+    .advertisment{
+        display: none;
+    }
+
+    .postContainer{
+        width: 100%;
+    }
+
+    .postCardList>:nth-child(2){
+        height: 350px;
+    }
+    .postCardList>:nth-child(2) img{
+        height: 70%;
+    }
+    .postCardList>:nth-child(2) .postContent{
+        height: 30%;
+    }
+
+    .postCard{
+        margin: 13px auto;
+        box-shadow: 1px 3px 4px 3px var(--lightShadow);
+        cursor: pointer;
+    }
+    
+}
+
+@media screen and (max-width: 600px) {
+    .mainContainer{
+        width:90vw;
+    }
+}

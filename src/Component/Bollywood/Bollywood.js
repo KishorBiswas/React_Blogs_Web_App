@@ -1,0 +1,132 @@
+import React, { useState, useEffect } from 'react';
+import {Link} from "react-router-dom";
+import BollyCss from "./Bollywood.module.css";
+import css from "../Articles/Articles.module.css";
+import Arrow from "../../Image/arrow.svg"
+import { ArtecaleData, PostData} from "../ArticalsData";
+
+// Use Auto-Animeat Libery
+import { useAutoAnimate } from '@formkit/auto-animate/react';
+
+
+
+function Bollywood() {
+
+
+  let [articels, setArticels] = useState(ArtecaleData);
+  let [showNoOfArticle, setshowNoOfArticle] = useState(7);
+  let [load, setLoad] = useState(true);
+
+
+  let [postData, setPostData] = useState(PostData);
+  let [numOfPostData, setnumOfPostData] = useState(4);
+
+  let [showCardAnimetion] = useAutoAnimate();
+
+
+
+
+  useEffect(() => {
+
+    if(showNoOfArticle == articels.length ){
+      // lodeCard.innerHTML = "Reset card";
+      setLoad((pre) => pre = false);
+    }
+    else{
+      // lodeCard.innerHTML = "Load Card";
+      setLoad((pre) => pre = true);
+    }
+    
+   
+  }, [showNoOfArticle]);
+
+  let showMore = () => {
+    if(showNoOfArticle + 2 < articels.length ){
+        setshowNoOfArticle((state) => state + 2);
+    }else{
+        setshowNoOfArticle((state) => state = articels.length);
+        
+    }
+
+    if(showNoOfArticle == articels.length ){
+        setshowNoOfArticle((number) => number = 7);
+        // lodeCard.innerHTML = "Load Card";
+        setLoad((pre) => pre = true);
+    }
+}
+
+
+  let showArticles = articels.slice(0, showNoOfArticle).map((artical, index) => {
+    let {listblog, title, body, publishedDate, image} = artical;
+    return (
+        // <Link  className={css.linkComponent}>
+        <Link to={listblog} key={index} className={css.cardContainer} >
+            <div className={css.imgContainer}>
+                <img src={image} alt="bligImg" />
+            </div>
+            <div className={css.cardContent}> 
+                <h3>{title}</h3>
+                <p>{body.slice(0, 80)}</p>
+                <span><b>Travel &nbsp; </b> / {publishedDate}</span>
+            </div>
+            
+        </Link>
+        // </Link>
+    )
+});
+
+
+
+  return (
+    <div className={css.mainContainer}>
+    {/* <div className={css.title}>
+        <h3>Latest Articles</h3>
+    </div> */}
+
+    <div className={css.itemContainer}>
+        <div className={css.articleContainer}>
+            <div className={`${css.articlesList} ${BollyCss.bollywoodList}`} ref={showCardAnimetion}>
+                    <div className={css.title}>
+                        <h3>Bollywood</h3>
+                    </div>
+                    {showArticles.length ? showArticles : "Bloges is Loading..."}
+                <div className={css.ShowMore} onClick={showMore}>
+                    <img src={Arrow} atl="showMore_Bloges" />
+                    <span> {load ? "Load More" : "Reset Card"}</span>
+                </div>
+            </div>
+           
+        </div>
+
+          <div className={css.postContainer}>
+            
+            <div className={css.postCardList}>
+            <div className={css.title}>
+                <h3>Top Post</h3>
+            </div>
+                {postData.slice(0, numOfPostData).map((post, index) => {
+                    let {listblog, title, body, publishedDate, image} = post;
+
+                    return(
+                        
+                        <div className={`${css.postCard } ${ BollyCss.bollyCard}`} key={index}>
+                            <img src={image} alt="Post_Blog" />
+                            <div className={css.postContent}>
+                                <h3>{title}</h3>
+
+                                <span><b>Travel &nbsp;</b> / {publishedDate}</span>
+                            </div>
+                        </div>
+                    );
+                })}
+            </div>
+            <div className={`${css.advertisment} ${BollyCss.bollyWood_Advertiesment}`}>
+                <p>Advertisment</p>
+            </div>
+        </div>
+    </div>
+</div>
+  )
+}
+
+export default Bollywood;

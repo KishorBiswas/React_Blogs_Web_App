@@ -1,0 +1,24 @@
+.bollywoodList>:nth-child(1){
+    height: 60px;
+}
+
+.bollyWood_Advertiesment{
+    height: 530px;
+    margin: 57px auto 5px;
+}
+
+.bollyCard{
+    margin-top: 18px;
+    height: 120px;
+}
+
+@media screen and (max-width: 960px) {
+    .bollyCard{
+        margin-top: 15px;
+        height: 115px;
+    }
+    .bollyWood_Advertiesment{
+        height: 454px;
+        margin: 30px auto 5px;
+    }
+}

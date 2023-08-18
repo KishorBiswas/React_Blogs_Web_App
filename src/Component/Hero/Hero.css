@@ -1,0 +1,125 @@
+.HeroComtainer{
+    width: 98%;
+    max-height: 500px;
+    /* position: relative; */
+    margin: 10px auto 5px;
+    z-index: 102;
+}
+
+.swiper{
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-vertical>.swiper-wrapper{
+    gap: 8px;
+    flex-direction: row !important;
+    flex-wrap: wrap;
+    
+}
+
+.swiper-wrapper>:nth-child(1){
+    /* width: 55%; */
+    flex: 54%;
+    max-height: 500px;
+    border-radius: 5px;
+    position: relative;
+}
+
+.swiper-wrapper>:nth-child(2),
+.swiper-wrapper>:nth-child(3){
+    width:30%;
+    position: relative;
+    height: min-content;
+    max-height: 248px;
+    border-radius: 5px;
+}
+
+.thirdSwiper-wrapper{
+    margin-left: calc(100% - 30%);
+    margin-top: -255px;
+}
+
+
+.swiper-slide img{
+    width:100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    border-radius: 5px;
+    z-index: 1;
+}
+.ImageContent{
+    position: absolute;
+    left: 30px;
+    bottom: 50px;
+    z-index: 100;
+}
+
+.ImageContent h3{
+    color: var(--fontCol);
+    text-shadow: 0 2px 3px var(--gray);
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+.ImageContent span{
+    color: var(--spanCol);
+    font-size: 16px;
+}
+
+.swiper-pagination{
+    display: none;
+}
+@media screen and (max-width:920px) {
+    .HeroComtainer{
+        width: 100%;
+        height: 400px;
+       
+    }
+}
+
+@media screen and (max-width:768px) {
+    .HeroComtainer{
+        width: 98%;
+        height: 400px;
+       
+    }
+    .swiper-wrapper{
+        width: 100%;
+        height: 100%;
+        transition-property: transform;
+        transition-timing-function: var(--swiper-wrapper-transition-timing-function, initial);
+    }
+    .swiper-vertical>.swiper-wrapper{
+        gap: 0;
+        
+    }
+
+    .swiper-pagination{
+        display: block;
+        color: var(--white);
+    }
+
+    .swiper-wrapper>:nth-child(1),
+    .swiper-wrapper>:nth-child(2),
+    .swiper-wrapper>:nth-child(3){
+        width: 100%;
+        max-height: 400px;
+        margin-left: 0;
+        margin-top: 0;
+    }
+
+    /* .swiper-wrapper>:nth-child(3){
+        margin-left: 0;
+        margin-top: 0;
+    } */
+    .swiper-slide img{
+        width:100%;
+        height: 100%;
+        display: block;
+        object-fit: cover;
+        border-radius: 5px;
+        z-index: 1;
+    }
+}
+
